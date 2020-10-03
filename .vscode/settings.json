@@ -1,0 +1,18 @@
+{
+    "editor.lightbulb.enabled": false,
+    "editor.tokenColorCustomizations": {
+        "[Solarized Light]": {
+            "textMateRules": [
+                {              
+                    "name": "Comments",
+                    "scope":"comment",
+                    "settings": {
+                        "fontStyle": ""
+                    }
+                }
+            ]
+        }
+    },
+    
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "msedge --remote-debugging-port=5500"
+}
