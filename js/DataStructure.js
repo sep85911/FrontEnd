@@ -48,6 +48,7 @@ var filtered = list002.filter(function(element){
 
 console.log(filtered)
 
+console.log("*______*")
 
 
 // 栈类
