@@ -15,4 +15,5 @@
     },
     
     // "liveServer.settings.AdvanceCustomBrowserCmdLine": "msedge --remote-debugging-port=5500"
+    "liveServer.settings.NoBrowser": true
 }
