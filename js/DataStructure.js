@@ -133,6 +133,7 @@ function JudgeSign(nChar)
     return -1
 }
 
+
 var tSignPrio = {
     "#":0,
     "+":1,
@@ -215,14 +216,20 @@ function Exp2Prexp( sText )
     return sExp;
 }
 
+function CObj(id)
+{
+    this.name = "";
+    this.id = id;
+    this.fucking = function (a)
+    {
+        this.id = this.id + a
+    }
+}
 
-var sTest = new Stack()
+var p1 = new CObj(85911);
 
-sTest.push("1")
-sTest.push("#");
-sTest.push(31);
+console.log(p1.id);
 
-console.log(sTest.peek());
-console.log(sTest.size())
-console.log(sTest.pop());
-console.log(sTest.size())
+p1.fucking(11);
+
+console.log(p1.id);
