@@ -226,10 +226,3 @@ function CObj(id)
     }
 }
 
-var p1 = new CObj(85911);
-
-console.log(p1.id);
-
-p1.fucking(11);
-
-console.log(p1.id);
