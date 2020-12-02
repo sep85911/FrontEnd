@@ -1,0 +1,33 @@
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+.clearfix{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+
+.header {
+    margin-top: 17px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-right:10px;
+    /* height:59px; */
+    background-color: cadetblue;
+}
+
+.container {
+    width:1260px;
+    height:59px;
+    margin:0px auto;
+}
+
+.left a{
+   float:left;
+   display: inline;
+   text-align: center;
+}

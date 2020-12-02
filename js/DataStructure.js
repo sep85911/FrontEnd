@@ -154,7 +154,6 @@ function JudgePrio(nFirst,nSecond) //判断运算符优先级 第一个高返回
         return 2
 }
 
-
 function Exp2Prexp( sText )
 {
     var sSign = new Stack();    //运算符号栈
