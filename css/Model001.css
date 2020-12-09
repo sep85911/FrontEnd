@@ -10,14 +10,40 @@
     clear:both;
 }
 
-
-a
-{
-    display: inline-block;
-    /* width:1280px; */
+.content{
     height:100px;
-    border:2px solid rgb(184, 60, 60);
-    padding:3px;
-    text-align: center;
-    
+}
+
+.header {
+    margin-top:17px;
+    margin-bottom: 15px;
+    padding-left :10px;
+    padding-right : 10px;
+
+
+}
+
+.row{
+    width:1260px;
+    height:59px;
+    margin:0 auto;
+
+    background-color: darkgray;
+}
+
+.logo {
+    float:left;
+}
+
+
+.logo h1{
+    margin-top:10px;
+    display:block;
+    height:39px;
+}
+
+.logo a{
+    width:258px;
+    height:39px;
+    display:block;
 }
