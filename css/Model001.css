@@ -28,7 +28,7 @@
     height:59px;
     margin:0 auto;
 
-    background-color: darkgray;
+    /* background-color: rgb(182, 116, 116); */
 }
 
 .logo {
@@ -40,10 +40,15 @@
     margin-top:10px;
     display:block;
     height:39px;
+    margin-left:20px;
 }
 
 .logo a{
     width:258px;
     height:39px;
     display:block;
+}
+
+.searchbar{
+    float:right;
 }
