@@ -1,7 +1,7 @@
 * {
     margin:0px;
     padding:0px;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 .clearfix{
@@ -28,16 +28,18 @@
     height:59px;
     margin:0 auto;
 
-    background-color: darkgray;
+    /* background-color: rgb(182, 116, 116); */
 }
 
 .logo {
+    width:61.6%;
     float:left;
+    margin-right:1%;
 }
 
 
 .logo h1{
-    margin-top:10px;
+    margin:10px 20px;
     display:block;
     height:39px;
 }
@@ -46,4 +48,27 @@
     width:258px;
     height:39px;
     display:block;
+}
+
+.searchbar{
+    float:left;
+    width:36%;
+    /* text-align: right; */
+}
+
+.searchtext{    
+    background-color: #eeefed;
+    margin:5px 0 0 0;
+    border-radius: 3px;
+    padding:5px;
+}
+
+.searchtext input {
+    height:35px;
+    width:94%;
+    padding:0 3% 0 3%;
+    font-size: 1.2em;
+    font-weight:400;
+    border:1px solid #c8c8c8;
+    /* line-height:34px; */
 }
