@@ -1,7 +1,11 @@
 * {
     margin:0px;
     padding:0px;
-    box-sizing: content-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 .clearfix{
@@ -53,7 +57,8 @@
 .searchbar{
     float:left;
     width:36%;
-    /* text-align: right; */
+    text-align: center;
+    box-sizing: content-box;
 }
 
 .searchtext{    
@@ -71,4 +76,11 @@
     font-weight:400;
     border:1px solid #c8c8c8;
     /* line-height:34px; */
+}
+
+.content1{
+    width:200px;
+    height:200px;
+    border:10px solid #be8383;
+    box-sizing: content-box;
 }
