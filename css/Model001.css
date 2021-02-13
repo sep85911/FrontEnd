@@ -72,7 +72,7 @@
     height:35px;
     width:94%;
     padding:0 3% 0 3%;
-    font-size: 1.2em;
+    font-size: 0.4cm;
     font-weight:400;
     border:1px solid #c8c8c8;
     /* line-height:34px; */
@@ -83,4 +83,34 @@
     height:200px;
     border:10px solid #be8383;
     box-sizing: content-box;
+}
+
+.nav-content {
+    padding:0 10px;
+    height:34px;
+    background-color: #96b97d;
+}
+
+.nav-bar{
+    width:1260px;
+    height:34px;
+    margin:0 auto;
+    padding:10px 0 0 20px;
+    font-family: proxima-nova,'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.nav-bar ul{
+    margin:0 10px;
+}
+
+.nav-bar ul li{
+    list-style-type: none;
+    display:inline-block;
+    font-size:0.8em;
+    margin:0 20px 0 0;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    color:white;
 }
