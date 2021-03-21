@@ -25,6 +25,20 @@
     float:right;
 }
 
-div {
+.third {
     background-color: rgb(180, 135, 79);
+    height: 300px;
+    width:300px;
+    position:relative;
+
+}
+
+.cStr{
+    /* background-color: bisque; */
+    width:150px;
+    height:100px;
+    background-color: bisque;
+    position:absolute;
+    top:50%;
+    margin-top: -50px;
 }
