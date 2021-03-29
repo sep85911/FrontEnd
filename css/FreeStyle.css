@@ -49,10 +49,12 @@
 {
     width:100px;
     height:100px;
+    line-height:100px;
     border-width: 5px;
     border-color: rosybrown;
     border-style: solid;
     margin:5px;
     box-sizing:content-box;
+    text-align: center;
 
 }
