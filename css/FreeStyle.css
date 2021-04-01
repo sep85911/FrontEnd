@@ -58,3 +58,14 @@
     text-align: center;
 
 }
+
+.cube002
+{
+    width:200px;
+    height:200px;
+    background-color: rgb(146, 120, 120);
+    margin:10px;
+    padding:10px;
+    border:10px solid blue;
+    box-sizing:content-box;
+}
