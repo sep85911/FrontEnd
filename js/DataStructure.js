@@ -2,27 +2,33 @@ var list001 = new Array(4);
 
 var list002 = [1,'a','b',321,false,"卧槽",432,54654,3213];
 
+var sMsg = ""
+
 for(var i = 0; i < list002.length;i++)
 {
-    console.log(list002[i])
+    sMsg = sMsg + list002[i] + " ";
 }
+
+console.log(sMsg)
 
 var poped = list002.pop();
 
 // 数组的pop操作（删除最后一个元素）
-console.log(poped);
+console.log("弹出最后1个元素 pop()：" + poped);
 
 //数组的删除操作 array.splice(n,m) 删除第n个开始数m个 然后返回
 var deleted = list002.splice(2,2);
-console.log(deleted);
+console.log("删除 从n开始第m个 splice(n,m)：" + deleted);
 
 //两个数组的联和 array1.concat(array2) 返回联合好的新数组 原数组和被联和的数组不变
 var concated = list002.concat(deleted)
-console.log(concated);
+console.log("原数组：" + list002);
+console.log("连接的数组：" + deleted);
+console.log("新数组：" + concated);
 
 //查找数组中第一个符合的元素 返回其索引 没有的话 返回-1
-var indof = list002.indexOf("fucked")
-console.log(indof);
+var indof = list002.indexOf("卧槽")
+console.log("查找：indexOf 卧槽在数组中的第" + indof + '个');
 
 // every函数 参数是一个匿名函数 依次传入数组中每一个元素 执行匿名函数后有一个为false 则every返回false 否则返回true
 var everyfunc = list002.every(function(a){
