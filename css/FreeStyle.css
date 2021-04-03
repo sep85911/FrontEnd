@@ -84,20 +84,34 @@
 
 .floatarea
 {
-    width:200px;
-    height:100px;
-    background-color: skyblue;
+    width:1000px;
+    /* height: 20px; 高度坍塌 必须是父元素没有设置高度的情况下 */
+    background-color: cornflowerblue;
 }
 
 .floatarea .skin
 {
-    margin-left:2px;
-    margin-bottom: 2px;
-    width:10px;
-    height:10px;
-    background-color: rgb(235, 135, 173);
+    margin:5px;
+    width:100px;
+    height:100px;
 }
 
 .floatarea .f{
     float:left;
+}
+
+.bg_blue{
+    background-color: blue;
+}
+
+.bg_red{
+    background-color: red;
+}
+
+.bg_green{
+    background-color: green;
+}
+
+.bg_pink{
+    background-color: pink;
 }
