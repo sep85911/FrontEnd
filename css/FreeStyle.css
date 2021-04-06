@@ -115,3 +115,27 @@
 .bg_pink{
     background-color: pink;
 }
+
+.smallcube
+{
+    width:15px;
+    height:15px;
+
+    margin:5px;
+    padding:5px;
+    background-color: blueviolet;
+    float:left;
+}
+
+.logo a
+{    
+    width: 258px;
+    height: 39px;
+    display: block;
+    /* background-color: burlywood; */
+}
+
+.logo h1{
+    background-image: url(../assets/runoob-logo.png);
+    background-repeat: no-repeat;
+}
