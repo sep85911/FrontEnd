@@ -136,6 +136,7 @@
 }
 
 .logo h1{
-    background-image: url(../assets/runoob-logo.png);
+    /* 注意下面这句，不需要引号的 */
+    background-image: url(../assets/runoob-logo.png); 
     background-repeat: no-repeat;
 }
