@@ -4,8 +4,7 @@ var hButton = document.getElementById("btn001")
 
 console.log("这个hButton是个:" + typeof hButton)
 
-function clickbtn001()
-{
+function clickbtn001() {
     console.log(hButton.innerHTML + "   " + Date());
     // hButton.innerHTML="点就点！"
 
@@ -24,12 +23,10 @@ function clickbtn001()
     console.log(typeof hButton.onclick)
 }
 
-function clickbtn001_2()
-{
+function clickbtn001_2() {
     console.log("中途改变了函数噢!")
 }
 
-function mouseoverbtn001()
-{
+function mouseoverbtn001() {
     console.log('鼠标掠过!')
 }
