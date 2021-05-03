@@ -16,3 +16,12 @@
 .visible{
     display:block;
 }
+
+
+.myBtn001 {
+
+    width: 200px;
+    height: 40px;
+    background-color: #c5b2b2;
+    /* border: 1px solid red; */
+}

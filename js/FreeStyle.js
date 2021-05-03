@@ -80,3 +80,44 @@ test(1)
 // 123
 // 123
 // function (){}
+
+
+var array02 = { 1: 1, "cuker": 2 };  //映射
+var array01 = [[312, 32, 2, array02], 1, 2, 3, 4, 5]   //数组
+function func001(a) {
+    var sName = "Tangyao"
+
+    if (sName == "tangyao") {
+        console.log("Yes");
+    } else {
+        console.log("No")
+    }
+
+    while (a < 10) {
+
+        console.log("这是:", a);
+        a++
+    }
+}
+
+
+func001(4)
+
+function funct002() {
+    console.log("clicking");
+}
+
+document.addEventListener("keyup", mykeydown)
+
+document.addEventListener("onclick", wholeClick)
+
+function mykeydown(ev) {
+    if (ev.keyCode == 83) {
+        console.log("s");
+    }
+    console.log(ev.keyCode);
+}
+
+function wholeClick(ev) {
+    console.log(ev)
+}
