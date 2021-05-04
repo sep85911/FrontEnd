@@ -100,6 +100,19 @@ function func001(a) {
     }
 }
 
+$(".myBtn001")[0].onclick = function () {
+
+    console.log("myBtn001 is clicking")
+    
+}
+
+
+var array03 = [31,534,674,423]
+
+$.each(array01,function (index, value) {
+    console.log(index, value);
+})
+
 
 func001(4)
 
@@ -121,3 +134,17 @@ function mykeydown(ev) {
 function wholeClick(ev) {
     console.log(ev)
 }
+
+var arr = [11,33,55,77,99];
+
+arr.forEach(function(value,index){
+    console.log(value,index);
+})
+
+console.log()
+
+
+
+$(function () {
+    alert("hehehe")
+})
