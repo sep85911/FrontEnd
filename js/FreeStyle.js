@@ -144,6 +144,12 @@ arr.forEach(function(value,index){
 
 let dd = document.getElementsByClassName("dd")[0]
 
-console.log('dd.childNodes.length:' + dd.childNodes.length)
+// console.log('dd.childNodes.length:' + dd.childNodes.length)
 
 
+function ShowPic(whichpic)
+{
+    var address = whichpic.getAttribute("href");
+    var placehold = document.getElementById("placehold");
+    placehold.setAttribute("src",address);
+}
