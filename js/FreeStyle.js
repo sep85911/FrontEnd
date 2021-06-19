@@ -141,10 +141,9 @@ arr.forEach(function(value,index){
     console.log(value,index);
 })
 
-console.log()
+
+let dd = document.getElementsByClassName("dd")[0]
+
+console.log('dd.childNodes.length:' + dd.childNodes.length)
 
 
-
-$(function () {
-    alert("hehehe")
-})
