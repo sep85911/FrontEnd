@@ -25,7 +25,6 @@ function ShowPic(whichpic){
     var adafa = whichpic.getAttribute("href");
     var imgg = document.getElementById("placehold");
     imgg.setAttribute("src",adafa)
-    console.log(adafa)
 
     var sText = whichpic.title;
 

@@ -31,6 +31,10 @@
     color:rgb(92, 114, 33);
 }
 
+img{
+    float: left;
+}
+
 #description {
-    /* float:left; */
+    float:left;
 }
