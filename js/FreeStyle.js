@@ -33,3 +33,9 @@ function ShowPic(whichpic){
     ppp.firstChild.nodeValue = sText;
 
 }
+
+function popUp(url)
+{
+    console.log("popUp")
+    window.open(url,"baidu","width=320,height=480");
+}
