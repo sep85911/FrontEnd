@@ -38,3 +38,35 @@ img{
 #description {
     float:left;
 }
+
+#div1 {
+    width:200px;
+    height:80px;
+    background-color: aquamarine;
+    /* float:left; */
+    display: inline-grid;
+
+}
+
+#div2{
+    width:150px;
+    height:50px;
+    background-color: rgb(33, 153, 39);
+    /* float:left; */
+    display: inline-grid;
+}
+
+#div3{
+    width:270px;
+    height:80px;
+    background-color: rgb(145, 128, 148);
+    /* float:left; */
+    display: inline-grid;
+}
+
+#div4{
+    width:300px;
+    height:111px;
+    background-color: rgb(94, 20, 48);
+    display: inline-grid;
+}
