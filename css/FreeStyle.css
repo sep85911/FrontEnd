@@ -36,37 +36,37 @@ img{
 }
 
 #description {
+    display:block;
+    color: cadetblue;
+}
+
+
+.cube{
+    width:200px;
+    height:200px;
+
+    margin:10px;
+    padding:10px;
+
+}
+
+.box1{
+    background-color: rgb(223, 108, 175);
     float:left;
 }
 
-#div1 {
-    width:200px;
-    height:80px;
-    background-color: aquamarine;
-    /* float:left; */
-    display: inline-grid;
-
+.box2{
+    background-color: blueviolet;
+    float:left;
 }
 
-#div2{
-    width:150px;
-    height:50px;
-    background-color: rgb(33, 153, 39);
-    /* float:left; */
-    display: inline-grid;
+.box3{
+    background-color: burlywood;
+    clear:both;
+    float:left;
 }
 
-#div3{
-    width:270px;
-    height:80px;
-    background-color: rgb(145, 128, 148);
-    /* float:left; */
-    display: inline-grid;
-}
-
-#div4{
-    width:300px;
-    height:111px;
-    background-color: rgb(94, 20, 48);
-    display: inline-grid;
+.box4{
+    background-color: cadetblue;
+    float:left;
 }

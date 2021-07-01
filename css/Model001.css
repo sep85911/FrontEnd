@@ -141,9 +141,6 @@ body {
     background-size: 40%;
 }
 
-.main{
-    border:1px solid black;
-}
 
 .main .main-content{
     width:1260px;
@@ -159,11 +156,36 @@ body {
 }
 
 .left-header{
+    border-color: #c8c8c8;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
     color:grey;
-    font-weight: 400;
-    font-size: 1.2em;
+    /* font-weight: 400; */
+    /* font-size: 1.2em; */
+    line-height:1.9em;
+    background-color: #f2f2f2;
+    font-family:proxima-nova,'Helvetica Neue',Helvetica,Arial,sans-serif;
+    padding-left:4px;
+    opacity: .7;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
-。main-content i{
+.main-content i{
     color:gray
+}
+
+div .col
+{
+    float:left;
+    border-width:1px;
+    border-style: solid;
+    border-color:black;
+}
+
+
+.main-right{
+    width:auto;
+    height:20px;
 }
