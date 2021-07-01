@@ -141,21 +141,51 @@ body {
     background-size: 40%;
 }
 
-.main{
-    border:1px solid black;
-}
 
 .main .main-content{
     width:1260px;
-    margin:0 auto;
-    border:1px solid black;
+    margin:20px auto;
+    /* border:1px solid black; */
 }
 
 .main-left {
     width:14%;
+    background-color: #f2f2f2;
+    padding-left: 4px;
 
 }
 
-。main-content i{
+.left-header{
+    border-color: #c8c8c8;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    color:grey;
+    /* font-weight: 400; */
+    /* font-size: 1.2em; */
+    line-height:1.9em;
+    background-color: #f2f2f2;
+    font-family:proxima-nova,'Helvetica Neue',Helvetica,Arial,sans-serif;
+    padding-left:4px;
+    opacity: .7;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.main-content i{
     color:gray
+}
+
+div .col
+{
+    float:left;
+    border-width:1px;
+    border-style: solid;
+    border-color:black;
+}
+
+
+.main-right{
+    width:auto;
+    height:20px;
 }
