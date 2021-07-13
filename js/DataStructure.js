@@ -15,6 +15,24 @@ var poped = list002.pop();
 // 数组的pop操作（删除最后一个元素）
 console.log("弹出最后1个元素 pop()：" + poped);
 
+list002.unshift(-3,-4)
+
+sMsg = ''
+for (var i = 0; i < list002.length; i++) {
+    sMsg = sMsg + list002[i] + " ";
+}
+
+console.log("unshift(-3,-4)之后的list002:" + sMsg)
+
+list002.splice(2,5,1,2) //参数1：从第几个 参数2：删除几个 参数3之后：添加的元素
+
+sMsg = ''
+for (var i = 0; i < list002.length; i++) {
+    sMsg = sMsg + list002[i] + " ";
+}
+
+console.log("splice(2,0,1,2)之后的list002:" + sMsg)
+
 //数组的删除操作 array.splice(n,m) 删除第n个开始数m个 然后返回
 var deleted = list002.splice(2, 2);
 console.log("删除 从n开始第m个 splice(n,m)：" + deleted);
@@ -31,13 +49,13 @@ console.log("查找：indexOf 卧槽在数组中的第" + indof + '个');
 
 // every函数 参数是一个匿名函数 依次传入数组中每一个元素 执行匿名函数后有一个为false 则every返回false 否则返回true
 var everyfunc = list002.every(function (a) {
-    return a != undefined;
+    return typeof a == "number"
 })
 console.log("everyfunc:" + everyfunc)
 
 // some函数 参数是一个匿名函数 依次传入数组中每一个元素 执行匿名函数后返回一个true 则为true 否则为false
 var somefunc = list002.some(function (a) {
-    return a > 54653;
+    return a >= 54654;
 })
 console.log("somefunc:" + somefunc)
 
@@ -118,6 +136,11 @@ function Dec2Bin(num) {
 console.log("这就是转换好了的二进制：" + Dec2Bin(999));
 
 
+const isDouble = a => a % 2 === 0
+
+var ret = isDouble(300);
+
+console.log(ret)
 
 
 
