@@ -136,11 +136,19 @@ function Dec2Bin(num) {
 console.log("这就是转换好了的二进制：" + Dec2Bin(999));
 
 
-const isDouble = a => a % 2 === 0
+const isDouble = a => {
+    // console.log("fuck you!" + a )
+    return  a % 2 === 0;
+}
 
-var ret = isDouble(300);
 
-console.log(ret)
+var nums = [2,3,4,5,6,8,1]
+
+var mapres = nums.filter(isDouble);
+
+console.log(mapres);
+
+
 
 
 
