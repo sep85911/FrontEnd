@@ -1,6 +1,6 @@
 // console.log("fuck you!")
 
-
+// 牛逼
 var btns = document.getElementsByClassName("btnStyle")
 var divs = document.getElementsByClassName("content")
 
