@@ -31,9 +31,9 @@
     color:rgb(92, 114, 33);
 }
 
-img{
+/* img{
     float: left;
-}
+} */
 
 #description {
     display:block;
@@ -84,4 +84,11 @@ img{
     content: "";
     display: block;
     clear: both;
+}
+
+
+.pic img{
+    /* max-width:800px; */
+    /* max-height:600px; */
+    transform: scale(0.3);
 }
