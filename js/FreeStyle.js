@@ -67,3 +67,13 @@ function AddLoadEvnet(func){
 
 
 AddLoadEvnet(ImageGallery);
+
+const Dosomething = r => r * r * Math.PI
+
+let nRound = Dosomething(10)
+
+console.log(nRound)
+
+const Saysomething = () => console.log("Saysomething")
+
+Saysomething()
