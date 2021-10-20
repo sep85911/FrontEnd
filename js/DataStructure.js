@@ -148,6 +148,16 @@ var mapres = nums.filter(isDouble);
 
 console.log(mapres);
 
+class Cobject1 {
+    constructor(id) {
+        this.m_ID = id;
+        this.say = function () {
+            console.log("saysssss");
+        };
+    }
+}
+
+
 
 
 
