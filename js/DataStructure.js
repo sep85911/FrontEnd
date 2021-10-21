@@ -157,7 +157,35 @@ class Cobject1 {
     }
 }
 
+var luoma = {"I":1,"V":5,"X":10,"L":50,"C":100,"D":500,"M":1000}
 
+s = "VIII"
+
+var romanToInt = function(s) {
+
+    var all = luoma[s[s.length - 1]]
+    for (let index = s.length - 1; index > 0; index--) {
+        const element = luoma[s[index]];
+        const next = luoma[s[index - 1]];
+
+        if(element == next)
+        {
+            all = all + element
+        }else
+        {
+            if(next <= all)
+            {
+                all = all - next
+            }else
+            {
+                all = all + next
+            }            
+        }
+    }
+    return all
+};
+
+console.log(romanToInt(s))
 
 
 
