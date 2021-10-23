@@ -159,7 +159,7 @@ class Cobject1 {
 
 var luoma = {"I":1,"V":5,"X":10,"L":50,"C":100,"D":500,"M":1000}
 
-s = "VIII"
+s = "VIIX"
 
 var romanToInt = function(s) {
 
@@ -186,6 +186,20 @@ var romanToInt = function(s) {
 };
 
 console.log(romanToInt(s))
+
+
+let myarry = [11,22,33,44,55,66,77]
+
+
+
+for (let index = 1; index < myarry.length; index++) {
+    const element = myarry[index];
+    console.log(element)
+}
+
+var aaaall = luoma[s[s.length - 1]]
+console.log(aaaall)
+
 
 
 
