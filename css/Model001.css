@@ -1,3 +1,7 @@
+html{
+    font-size: 62.5%;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -157,11 +161,27 @@ body {
     margin-top: 20px;
 }
 
-row {
-    margin-top: 20px;
+.row {
+    width: 1260px;
+    margin: 0 auto;
 }
 
-col {
-    margin-left: 5px;
+.col {
+    margin-right: 1%;
     float: left;
+}
+
+.main-left {
+    width:16%;
+    height:200px;
+    /* margin-left: 5px; */
+    border: 1px solid rgb(221, 56, 56);
+}
+
+.tab{
+    font-size:1.2em;
+    padding-left: 4px;
+    color:#64854c;
+    line-height:2.6em;
+    background-color:#f2f2f2 ;
 }
