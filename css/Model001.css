@@ -10,6 +10,8 @@ html{
 body {
     background-color: #f6f6f6;
     font-size: 1.2em;
+    
+    font-family:Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
 }
 
 *,
@@ -137,7 +139,7 @@ body {
     color: white;
     height: 38px;
 
-    /*设置为块盒 让高度生效*/
+    /* 设置为块盒 让高度生效 */
     display: block;
 }
 
@@ -184,4 +186,5 @@ body {
     color:#64854c;
     line-height:2.6em;
     background-color:#f2f2f2 ;
+    font-weight: bold;
 }
