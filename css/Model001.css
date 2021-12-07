@@ -1,4 +1,4 @@
-html{
+html {
     font-size: 62.5%;
 }
 
@@ -10,8 +10,8 @@ html{
 body {
     background-color: #f6f6f6;
     font-size: 1.2em;
-    
-    font-family:Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
+
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Noto Sans CJK SC, WenQuanYi Micro Hei, Arial, sans-serif;
 }
 
 *,
@@ -141,7 +141,7 @@ body {
 
     /* 设置为块盒 让高度生效 */
     display: block;
-    padding:0 2px;
+    padding: 0 2px;
 }
 
 .nav-bar ul li a:hover {
@@ -175,14 +175,14 @@ body {
 }
 
 .main-left {
-    width:16%;
-    height:200px;
+    width: 16%;
+    height: 200px;
     /* margin-left: 5px; */
     /* border: 1px solid rgb(221, 56, 56); */
 }
 
-.tab{
-    font-size:1.2em;
+.tab {
+    font-size: 1.2em;
     padding-left: 4px;
     color:#64854c;
     line-height:2.6em;
@@ -192,29 +192,28 @@ body {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom: 0px;
-    background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMTclIiB4Mj0iNTAlIiB5Mj0iLTE3JSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMDAiIHN0b3Atb3BhY2l0eT0iMC4wNSIvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iMC4wNSIvPgogICA8L2xpbmVhckdyYWRpZW50PgoKPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjaGF0MCkiIC8+Cjwvc3ZnPg==)
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMTclIiB4Mj0iNTAlIiB5Mj0iLTE3JSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMDAiIHN0b3Atb3BhY2l0eT0iMC4wNSIvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iMC4wNSIvPgogICA8L2xpbmVhckdyYWRpZW50PgoKPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjaGF0MCkiIC8+Cjwvc3ZnPg==)
 }
 
-.siderbar-box{
-    background-color:#fff;
+.siderbar-box {
+    background-color: #fff;
 }
 
-.design{
-    padding:4px;
+.design {
+    padding: 4px;
     margin: 0px;
     overflow: hidden;
     background-color: rgb(255, 255, 255);
 }
 
-.navto-nav{
-    margin:8px 2px;
-    font-size:14px;
+.navto-nav {
+    margin: 8px 2px;
+    font-size: 14px;
 }
 
-.design:nth-child(even)
-{
-    background-color:#fbfbfb;
-    border-top:1px solid #efefef;
+.design:nth-child(even) {
+    background-color: #fbfbfb;
+    border-top: 1px solid #efefef;
     border-bottom: 1px solid #efefef;
 }
 
