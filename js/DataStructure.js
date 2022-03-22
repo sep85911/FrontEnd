@@ -15,7 +15,7 @@ var poped = list002.pop();
 // 数组的pop操作（删除最后一个元素）
 console.log("弹出最后1个元素 pop()：" + poped);
 
-list002.unshift(-3,-4)
+list002.unshift(-3, -4)
 
 sMsg = ''
 for (var i = 0; i < list002.length; i++) {
@@ -24,7 +24,7 @@ for (var i = 0; i < list002.length; i++) {
 
 console.log("unshift(-3,-4)之后的list002:" + sMsg)
 
-list002.splice(2,5,1,2) //参数1：从第几个 参数2：删除几个 参数3之后：添加的元素
+list002.splice(2, 5, 1, 2) //参数1：从第几个 参数2：删除几个 参数3之后：添加的元素
 
 sMsg = ''
 for (var i = 0; i < list002.length; i++) {
@@ -138,11 +138,11 @@ console.log("这就是转换好了的二进制：" + Dec2Bin(999));
 
 const isDouble = a => {
     // console.log("fuck you!" + a )
-    return  a % 2 === 0;
+    return a % 2 === 0;
 }
 
 
-var nums = [2,3,4,5,6,8,1]
+var nums = [2, 3, 4, 5, 6, 8, 1]
 
 var mapres = nums.filter(isDouble);
 
@@ -157,29 +157,25 @@ class Cobject1 {
     }
 }
 
-var luoma = {"I":1,"V":5,"X":10,"L":50,"C":100,"D":500,"M":1000}
+var luoma = { "I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000 }
 
 s = "VIIX"
 
-var romanToInt = function(s) {
+var romanToInt = function (s) {
 
     var all = luoma[s[s.length - 1]]
     for (let index = s.length - 1; index > 0; index--) {
         const element = luoma[s[index]];
         const next = luoma[s[index - 1]];
 
-        if(element == next)
-        {
+        if (element == next) {
             all = all + element
-        }else
-        {
-            if(next <= all)
-            {
+        } else {
+            if (next <= all) {
                 all = all - next
-            }else
-            {
+            } else {
                 all = all + next
-            }            
+            }
         }
     }
     return all
@@ -188,7 +184,7 @@ var romanToInt = function(s) {
 console.log(romanToInt(s))
 
 
-let myarry = [11,22,33,44,55,66,77]
+let myarry = [11, 22, 33, 44, 55, 66, 77]
 
 
 

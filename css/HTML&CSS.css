@@ -1,16 +1,13 @@
 div {
-    color:aquamarine;
+    color: aquamarine;
 }
 
 div ul li {
 
     /* 只要后面跟了 !important 优先级直接最高 */
-    color:burlywood !important
-
-    
+    color: burlywood !important
 }
 
 div ul li {
     color: blue;
 }
-

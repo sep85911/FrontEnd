@@ -184,11 +184,11 @@ body {
 .tab {
     font-size: 1.2em;
     padding-left: 4px;
-    color:#64854c;
-    line-height:2.6em;
-    background-color:#f2f2f2 ;
+    color: #64854c;
+    line-height: 2.6em;
+    background-color: #f2f2f2;
     font-weight: bold;
-    border:1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom: 0px;
@@ -219,31 +219,31 @@ body {
 
 
 .main-right {
-    width:78%;
-    height:800px;
+    width: 78%;
+    height: 800px;
     background-color: #fff;
-    padding:12px 20px;
-    margin:0px;
-    border:1px solid #eaeaea;
+    padding: 12px 20px;
+    margin: 0px;
+    border: 1px solid #eaeaea;
     border-radius: 4px;
 }
 
 
-.kindbox h1{
+.kindbox h1 {
     font-size: 18px;
     /* color: #be8383; */
-    margin:12px 0;
+    margin: 12px 0;
     display: block;
-    border-bottom:1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
 }
 
-.kindbox a{
-    text-decoration:none;
-    color:#666;
+.kindbox a {
+    text-decoration: none;
+    color: #666;
     background-color: #f6f6f6;
-    height:80px;
-    width:28%;
-    float:left;
+    height: 80px;
+    width: 28%;
+    float: left;
     padding: 6px 16px;
     margin-top: 0px;
     margin-bottom: 10px;
@@ -253,25 +253,25 @@ body {
 }
 
 
-.kindbox a h4{
-    color:#64854c;
+.kindbox a h4 {
+    color: #64854c;
     font-size: 16px;
     margin: 10px 0px;
     line-height: 1.1;
 }
 
-.kindbox a img{
-    margin-left:10px;
-    margin-right:10px;
-    width:36px;
+.kindbox a img {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 36px;
     height: 36px;
     margin-bottom: 5px;
-    float:left;
+    float: left;
     border-radius: 5px;
 
 }
 
-.kindbox a strong{
-    text-align:left;
+.kindbox a strong {
+    text-align: left;
     /* float:right; */
 }
