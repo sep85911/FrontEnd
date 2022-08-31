@@ -1,0 +1,25 @@
+* 
+{
+    margin:0px;
+    padding:0px;
+}
+
+#shortcut 
+{
+    border-bottom:1px solid #ddd;
+    background-color: #e3e4e5;
+    height:30px;
+}
+
+#shortcut .top-nav
+{
+    height: 30px;
+    line-height:30px;
+    color:#999;
+}
+
+.top-nav
+{
+    margin:auto;
+    width:1190px;
+}
