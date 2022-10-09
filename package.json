@@ -1,0 +1,20 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "My front-end learning project",
+  "main": "index.js",
+  "scripts": {
+      "server": "live-server ./ --port=8081"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sep85911/FrontEnd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sep85911/FrontEnd/issues"
+  },
+  "homepage": "https://github.com/sep85911/FrontEnd#readme"
+}

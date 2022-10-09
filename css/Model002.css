@@ -16,10 +16,14 @@
     height: 30px;
     line-height:30px;
     color:#999;
-}
-
-.top-nav
-{
     margin:auto;
     width:1190px;
+}
+
+#shortcut .top-nav .left
+{
+    padding: 5px;
+    width: 120px;
+    height: 10px;
+    background-color: #daa731; 
 }
