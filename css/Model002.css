@@ -45,3 +45,8 @@ a:visited
 {
    color: #1c1c3c; 
 }
+
+#myCanvas
+{
+    border:1px solid #d3d3d3;
+}
