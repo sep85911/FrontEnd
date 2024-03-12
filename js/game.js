@@ -225,14 +225,46 @@ document.addEventListener('mousedown', function (event) {
 
 
 // 确保在所有图片资源加载完成后开始游戏循环
+
+// var playerName = prompt("Please enter your name:");
+
+var playerName = localStorage.getItem("playerName");
+if (playerName) {
+    // 如果已经存储了玩家的名字
+    alert("Welcome back, " + playerName + "! Let's start the game!");
+    // 这里可以添加游戏逻辑，并传递玩家的名字到游戏逻辑中
+} else {
+    // 如果没有存储玩家的名字，则提示玩家输入名字
+    var inputName = prompt("Please enter your name:");
+    if (inputName !== null && inputName !== "") {
+        localStorage.setItem("playerName", inputName);
+        alert("Hello, " + inputName + "! Let's start the game!");
+        // 这里可以添加游戏逻辑，并传递玩家的名字到游戏逻辑中
+    } else {
+        // 如果玩家点击了取消按钮或者没有输入名字直接点击了确定按钮，则不开始游戏
+        alert("Please enter your name to start the game!");
+    }
+}
+
+// function recordName(name) {
+//   // 发送名字到服务器
+//   fetch('http://192.168.100.76:5500/recordName', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({ name: name })
+//   });
+// }
+
 Promise.all([birdImg, pipeNorthImg, pipeSouthImg, backgroundImg].map(img => new Promise((resolve, reject) => {
     img.onload = resolve;
     img.onerror = reject;
 })))
-.then(() => {
-    spawnObstacle(); // 初始化一个障碍物
-    gameLoop();
-})
-.catch((error) => {
-    console.error('Error loading images:', error);
-});
+    .then(() => {
+        spawnObstacle(); // 初始化一个障碍物
+        gameLoop();
+    })
+    .catch((error) => {
+        console.error('Error loading images:', error);
+    });
