@@ -13,6 +13,9 @@ pipeSouthImg.src = './assets/FBirds/pipeSouth.png';
 const backgroundImg = new Image();
 backgroundImg.src = './assets/FBirds/bg.png';
 
+const road = new Image();
+road.src = './assets/FBirds/fg.png';
+
 const restartButton = document.getElementById('restartButton');
 
 restartButton.addEventListener('click', function() {
@@ -40,14 +43,14 @@ function spawnObstacle() {
     const minHeight = 20;
     const maxHeight = canvas.height - gapHeight - minHeight;
 
-    const pipeHeight = Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight;
+    const pipeHeight = Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight - 100;
     const obstacle = {
         x: canvas.width,
         yTop: 0,
         heightTop: pipeHeight,
         yBottom: pipeHeight + gapHeight,
-        heightBottom: canvas.height - (pipeHeight + gapHeight),
-        width: 52, // 调整管道的宽度
+        heightBottom: canvas.height - (pipeHeight + gapHeight) - road.height,
+        width: 50, // 调整管道的宽度
     };
 
     obstacles.push(obstacle);
@@ -56,6 +59,13 @@ function spawnObstacle() {
 function drawBackground() {
     ctx.drawImage(backgroundImg, backgroundX, 0, canvas.width, canvas.height);
     ctx.drawImage(backgroundImg, backgroundX + canvas.width, 0, canvas.width, canvas.height);
+    let x = backgroundX % road.width; // Calculate the starting x-coordinate for drawing the foreground image
+
+    // Draw foreground images until the canvas is filled horizontally
+    while (x < canvas.width) {
+        ctx.drawImage(road, x, canvas.height - road.height); // Draw foreground image at the bottom of the canvas
+        x += road.width;
+    }
 }
 
 function updateBackground() {
@@ -73,6 +83,17 @@ function updateBackground() {
 
 function drawObstacles() {
     obstacles.forEach(obstacle => {
+        // 计算管道底部的位置
+        let pipeBottomY = obstacle.yTop + obstacle.heightTop;
+
+        // 如果管道的底部低于地面的顶部，则调整管道的位置
+        if (pipeBottomY > canvas.height - road.height) {
+            let newHeightTop = obstacle.heightTop - (pipeBottomY - (canvas.height - road.height));
+            obstacle.yTop -= (pipeBottomY - (canvas.height - road.height));
+            obstacle.heightTop = newHeightTop;
+        }
+
+        // 绘制管道
         ctx.drawImage(pipeNorthImg, obstacle.x, obstacle.yTop, obstacle.width, obstacle.heightTop);
         ctx.drawImage(pipeSouthImg, obstacle.x, obstacle.yBottom, obstacle.width, obstacle.heightBottom);
     });
@@ -141,7 +162,7 @@ function updateBird() {
     }
 
     // 如果小鸟碰到屏幕上下边缘，立即结束游戏
-    if (bird.y - bird.radius < 0 || bird.y + bird.radius > canvas.height) {
+    if (bird.y - bird.radius < 0 || bird.y + bird.radius > canvas.height - road.height) {
         gameOver();
         return
     }
