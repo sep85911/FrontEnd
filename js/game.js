@@ -13,6 +13,9 @@ pipeSouthImg.src = './assets/FBirds/pipeSouth.png';
 const backgroundImg = new Image();
 backgroundImg.src = './assets/FBirds/bg.png';
 
+const road = new Image();
+road.src = './assets/FBirds/fg.png';
+
 const restartButton = document.getElementById('restartButton');
 
 restartButton.addEventListener('click', function() {
@@ -32,6 +35,7 @@ let obstacles = [];
 let backgroundX = 0; // 用于记录背景图的X坐标
 let gameActive = true;
 let score = 0;
+let Hiscore = 0;
 let passedGap = false; // 标志是否已经通过缝隙
 
 function spawnObstacle() {
@@ -39,14 +43,14 @@ function spawnObstacle() {
     const minHeight = 20;
     const maxHeight = canvas.height - gapHeight - minHeight;
 
-    const pipeHeight = Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight;
+    const pipeHeight = Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight - 100;
     const obstacle = {
         x: canvas.width,
         yTop: 0,
         heightTop: pipeHeight,
         yBottom: pipeHeight + gapHeight,
-        heightBottom: canvas.height - (pipeHeight + gapHeight),
-        width: 52, // 调整管道的宽度
+        heightBottom: canvas.height - (pipeHeight + gapHeight) - road.height,
+        width: 50, // 调整管道的宽度
     };
 
     obstacles.push(obstacle);
@@ -55,6 +59,13 @@ function spawnObstacle() {
 function drawBackground() {
     ctx.drawImage(backgroundImg, backgroundX, 0, canvas.width, canvas.height);
     ctx.drawImage(backgroundImg, backgroundX + canvas.width, 0, canvas.width, canvas.height);
+    let x = backgroundX % road.width; // Calculate the starting x-coordinate for drawing the foreground image
+
+    // Draw foreground images until the canvas is filled horizontally
+    while (x < canvas.width) {
+        ctx.drawImage(road, x, canvas.height - road.height); // Draw foreground image at the bottom of the canvas
+        x += road.width;
+    }
 }
 
 function updateBackground() {
@@ -72,6 +83,17 @@ function updateBackground() {
 
 function drawObstacles() {
     obstacles.forEach(obstacle => {
+        // 计算管道底部的位置
+        let pipeBottomY = obstacle.yTop + obstacle.heightTop;
+
+        // 如果管道的底部低于地面的顶部，则调整管道的位置
+        if (pipeBottomY > canvas.height - road.height) {
+            let newHeightTop = obstacle.heightTop - (pipeBottomY - (canvas.height - road.height));
+            obstacle.yTop -= (pipeBottomY - (canvas.height - road.height));
+            obstacle.heightTop = newHeightTop;
+        }
+
+        // 绘制管道
         ctx.drawImage(pipeNorthImg, obstacle.x, obstacle.yTop, obstacle.width, obstacle.heightTop);
         ctx.drawImage(pipeSouthImg, obstacle.x, obstacle.yBottom, obstacle.width, obstacle.heightBottom);
     });
@@ -140,7 +162,7 @@ function updateBird() {
     }
 
     // 如果小鸟碰到屏幕上下边缘，立即结束游戏
-    if (bird.y - bird.radius < 0 || bird.y + bird.radius > canvas.height) {
+    if (bird.y - bird.radius < 0 || bird.y + bird.radius > canvas.height - road.height) {
         gameOver();
         return
     }
@@ -150,12 +172,16 @@ function updateBird() {
             score++; // 鸟通过一个缝隙，分数加1
             passedGap = true; // 设置已经通过缝隙的标志
             // console.log(passedGap);
+            if (Hiscore < score)
+            {
+                Hiscore = score;
+            }
         }
     });
 
     if (bird.x > obstacles[0].x + obstacles[0].width ) {
         passedGap = false; // 重置通过缝隙的标志
-        console.log(obstacles[0].x);
+        // console.log(obstacles[0].x);
     }
 
 }
@@ -165,20 +191,70 @@ function drawScore() {
     ctx.font = '20px Arial';
     ctx.fillStyle = 'black';
     ctx.fillText('Score: ' + score, 10, 30); // 在画布上绘制分数文本
+    ctx.fillText('HiScore: ' + Hiscore, 10, 60); // 在画布上绘制分数文本
 }
 
 
 function gameOver() {
-    gameActive = false; // 游戏结束
     // ctx.clearRect(0, 0, canvas.width, canvas.height);
     // ctx.fillStyle = 'black';
     // ctx.font = '30px Arial';
     // ctx.fillText('Game Over', canvas.width / 2 - 80, canvas.height / 2);
     // obstacles = []; // 停止显示管道
+    if(Hiscore <= score)
+    {
+        sendScoreToServer(score)
+    }
 
+    
+    gameActive = false; // 游戏结束
     // 监听点击事件，点击时重新开始游戏
     // document.addEventListener('click', restartGame, { once: true });
+
+
 }
+
+function sendScoreToServer(score) {
+    // 构造要发送的数据
+    const data = {
+        score: score
+    };
+
+    // 发送 POST 请求给后端
+    fetch('/addScore', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log('Score sent successfully');
+            // 如果分数发送成功，则可以执行其他逻辑，例如获取排行榜数据
+            fetchLeaderboard();
+        } else {
+            console.error('Failed to send score to server');
+        }
+    })
+    .catch(error => console.error('Error sending score:', error));
+}
+
+function fetchLeaderboard() {
+    fetch('/leaderboard')
+        .then(response => response.json())
+        .then(data => {
+            const leaderboard = document.getElementById('leaderboard');
+            leaderboard.innerHTML = ''; // 清空现有的排行榜
+            data.forEach((score, index) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `#${index + 1}: ${score}`;
+                leaderboard.appendChild(listItem);
+            });
+        })
+        .catch(error => console.error('Error fetching leaderboard:', error));
+}
+
 
 function restartGame() {
     gameActive = true; // 游戏开始

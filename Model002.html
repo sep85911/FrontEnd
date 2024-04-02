@@ -2,18 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon"/>
-    <title>京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物！</title>
-
-    <link rel="stylesheet" href="./css/Model002.css">
+    <title>Fetch POST Example</title>
 </head>
 <body>
+    <h1>Fetch POST Example</h1>
+    <button onclick="postData()">Send POST Request</button>
+    
+    <script>
+        async function postData() {
+            const data = { name: 'Alice', age: 30 };
 
-   <canvas id="myCanvas" width="832" height="608"></canvas>
+            const response = await fetch('http://localhost:3000/api/postData', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
 
-
-    <script src="js/Model002.js"></script>
+            const responseData = await response.json();
+            console.log(responseData);
+        }
+    </script>
 </body>
 </html>
