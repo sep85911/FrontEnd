@@ -71,15 +71,31 @@
         <input type="radio" name="loved" id="3">看片
         <br>
         爱好2：
-        <input type="radio" name="habbit" id="11">看书
-        <input type="radio" name="habbit" id="21">看报
-        <input type="radio" name="habbit" id="31">看片
+        <input type="radio" name="habbit" id="11" value="1">
+        <label for="11">看书</label>
+        <input type="radio" name="habbit" id="21" value="2">
+        <label for="21">看报</label>
+        <input type="radio" name="habbit" id="31" value="3">
+        <label for="31">看片</label>
+        <button type="button" onclick="getSelectedOption()")>提交</button>
         <br>
         专业：
         <input type="checkbox" name="pro" id="4">游戏策划
         <input type="checkbox" name="pro" id="5">游戏运营
         <br>
         <input type="submit" value="提交">
+
+        <input type="radio" name="sex" id="male" value="male">
+        <label for="male">男</label>
+        <input type="radio" name="sex" id="female" value="female">
+        <label for="female">女</label>
+        <input type="button" id = "sexbtn" value="提交">
+        <br>
+        <select name="city" id="cities">
+            <option value="beijing">北京</option>
+            <option value="shanghai">上海</option>
+            <option value="guangzhou">广州</option>
+        </select>
     </form>
 
 
