@@ -196,9 +196,25 @@ for (let index = 1; index < myarry.length; index++) {
 var aaaall = luoma[s[s.length - 1]]
 console.log(aaaall)
 
+console.log("-----------------------------------------------------")
 
 
+let p1 = document.getElementById("p1")
+let p2 = document.getElementById("p2")
 
+p1.style.color = "red"
+p1.style.fontSize = "80px"
+p2.style.color = "blue"
+p2.style.fontSize = "40px"
+p2.style.fontWeight = "bold"
+
+
+let res1 = p1.getAttributeNode("style").nodeValue
+let res2 = p2.getAttributeNode("style").nodeValue
+
+document.write(res1 + "&nbsp;&nbsp;&nbsp;&nbsp" + typeof(res1))
+document.write("<br>")
+document.write(res2 +  "&nbsp;&nbsp;&nbsp;&nbsp" + typeof(res2))
 
 
 
