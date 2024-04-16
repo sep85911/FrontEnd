@@ -203,7 +203,6 @@ let p1 = document.getElementById("p1")
 // p1 = document.getElementById("p1")
 p1.style.color = "red"
 p1.style.fontSize = "80px"
-p1.setAttribute("style","fontWeight: bolder")
 
 
 let p2 = document.getElementById("p2")
