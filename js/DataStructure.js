@@ -186,8 +186,6 @@ console.log(romanToInt(s))
 
 let myarry = [11, 22, 33, 44, 55, 66, 77]
 
-
-
 for (let index = 1; index < myarry.length; index++) {
     const element = myarry[index];
     console.log(element)
@@ -200,21 +198,18 @@ console.log("-----------------------------------------------------")
 
 
 let p1 = document.getElementById("p1")
-let p2 = document.getElementById("p2")
 
+// p1.id = "fdsaff"
+// p1 = document.getElementById("p1")
 p1.style.color = "red"
 p1.style.fontSize = "80px"
+p1.setAttribute("style","fontWeight: bolder")
+
+
+let p2 = document.getElementById("p2")
 p2.style.color = "blue"
 p2.style.fontSize = "40px"
 p2.style.fontWeight = "bold"
-
-
-let res1 = p1.getAttributeNode("style").nodeValue
-let res2 = p2.getAttributeNode("style").nodeValue
-
-document.write(res1 + "&nbsp;&nbsp;&nbsp;&nbsp" + typeof(res1))
-document.write("<br>")
-document.write(res2 +  "&nbsp;&nbsp;&nbsp;&nbsp" + typeof(res2))
 
 
 
